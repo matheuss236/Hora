@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+div#msg {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+}
+
+div#foto{
+          background-color: white;
+}

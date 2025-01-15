@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas são?</title>
+    <link rel="stylesheet" href="hora.css">
+
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Que horas são?</h1>
+    </header>
+     <main>
+        <div id="msg">
+        
+        </div>
+        <div id="foto">
+            <img src="img/fotomanha.png" alt="" id="img">
+        </div>
+        
+     </main>
+ 
+</body>
+
+
+
+<script>
+    function carregar(){
+
+     
+    let msg = document.getElementById ('msg')
+    let img =  document.getElementById ('img')
+    let data = new Date()
+    let hora = data.getHours()
+
+  
+    if (hora >= 0 && hora < 12){
+        img.src = 'img/fotomanha.png'
+}
+
+else if ( hora >= 12 && hora <= 18){
+      img.src = 'img/fototarde.png'
+}
+
+else {
+    img.src = 'img/fotonoite.png'
+    document.body.style.background = 'mediumblue'
+}
+     msg.innerText =  `Agora são ${hora}`
+}
+</script>
+
+
+
+</html>
